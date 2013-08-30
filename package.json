@@ -1,0 +1,17 @@
+{
+  "name": "first-express-app",
+  "description": "an example of using Express",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "jasmine-node": "~1.11.0",
+    "request": "~2.27.0",
+    "mongojs": "~0.7.17",
+    "coffee-script": "~1.6.3",
+    "mongorepository": "~1.0.1",
+    "supertest": "~0.7.1",
+    "should": "~1.2.2"
+  },
+  "main": "quote"
+}
