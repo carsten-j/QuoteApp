@@ -1,11 +1,6 @@
-
 # Moderne webudvikling - del 1
 
-Jeg kommer fra en C# backend developer baggrund og har et stykke tid haft lyst til at få et indblik i webudvikling.
 
-viden om moderne webudvikling. Dette er det første blog indlæg i en serie om open source moderne webudvikling foretaget primært på en Mac Air.
-
-ikke tutorial mere lærings og dokumentations process
 
 ## Server
 Oprindeligt blev Javascript vist mest opfattet som en klient teknologi brugt i internet browsere. Vi har på det senere set en trend med at Javascript er blevet brugt mere og mere til flere og større projekter. Dette var ikke udgangspunktet for Javascript som programmeringssprog, hvorfor det giver nogle udfordringer med blandt andet at organisere ens kodebase så man ikke ender med en omgang spagettikode. Frameworks som [Angular](http://angularjs.org/) og [Ember](http://emberjs.com/) har set dagens lys og åbnet muligheder for bedre organisering af Javascript kode efter MVC design pattern. Samtidig ser vi eksempler på "programmeringssprog" [Typescript](http://www.typescriptlang.org/) og [Coffeescript](http://coffeescript.org/) som giver nye muligheder for højere abstraktion i Javascript med indførelse af OO koncepter som indkapsling, nedarvning, moduler og interfaces  ... og generics. (er det mon FP).    Underscore 
@@ -66,14 +61,17 @@ http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with
 
 # Moderne webudvikling - del 0
 
-Introducing the “Learn Something New” series
-Today I am introducing what I hope will be a long term project for this blog, my “Learn Something New” series.
+Jeg har en baggrund som C# backend developer og har et stykke tid haft lyst til at få et indblik i moderne open source webudvikling.
+Dette blog indlæg er det første i en serie af indlæg hvor fokus vil være at lære noget nyt. Det er mit håb at det
+bliver et længere varende projekt med undertitlen "Lær noget nyt".
 
-The series will be mainly focussed on web development and learning the basics of a tool or framework I did not previously know. Where possible I will be providing all the source on GitHub and links to the project up and running on a free cloud service like AppHarbor or Heroku.
+Første del af serie vil være om 
+viden om moderne webudvikling. Dette er det første blog indlæg i en serie om open source moderne webudvikling foretaget primært på en Mac Air.
 
-To set a few ground rules
+Afslutningvis vil jeg lige nævne
 
-These projects will not be “best practice”. Where possible I am trying to focus on a single new piece of kit and anything else will be kept at a minimum to make it work.
-Unless the post is about a UI tool, then there is likely to be no design work put into the project. See point 1, I am aiming for a quick turn around on each project.
-These will be frameworks and tools I am new to, so I may make mistakes and I may do things the wrong way. If you see me doing that, I would be more than happy to hear from you and pointed in the right direction.
-In the end this is some motivation and structure to my own learning. The blog gets to come along for the ride. So set your expectations appropriately and everything should be cool.
+* 'Lær noget nyt' projekterne skal ikke opfattes som 'best practice' eller produktionskode. Fokus er på at få indblik i for mig nye teknologier, programmeringsprog, værktøjer m.v.
+* Når man taler webudvikling kommer man ikke uden om UI men forvent ikke gennemarbejde UI designs
+* Dette er et 'Do it yourself' projekt, og jeg kommer derfor til at begå fejl og/eller bevæge mig i den forkerte retning. Hvis du som læser bemærker dette og har viden på området så hører jeg meget gerne fra dig med konstruktion kritik.
+
+ikke tutorial mere lærings og dokumentations process
