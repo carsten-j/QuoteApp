@@ -61,17 +61,17 @@ http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with
 
 # Moderne webudvikling - del 0
 
-Jeg har en baggrund som C# backend developer og har et stykke tid haft lyst til at få et indblik i moderne open source webudvikling.
-Dette blog indlæg er det første i en serie af indlæg hvor fokus vil være at lære noget nyt. Det er mit håb at det
-bliver et længere varende projekt med undertitlen "Lær noget nyt".
+## Lær noget nyt
 
-Første del af serie vil være om 
-viden om moderne webudvikling. Dette er det første blog indlæg i en serie om open source moderne webudvikling foretaget primært på en Mac Air.
+Jeg har en baggrund som C# backend developer og har et stykke tid haft lyst til at få et indblik i moderne open source webudvikling. Dette blog indlæg er det første i en serie af indlæg hvor fokus vil være at lære noget nyt. Det er mit håb, at det bliver et længerevarende projekt med undertitlen "Lær noget nyt".
 
-Afslutningvis vil jeg lige nævne
+Første del af serien vil være om moderne webudvikling. Mere specifikt om en web applikation skrevet 100% i Javascript for både server og klient. Server-delen vil være baseret på Node.js mens klient-delen bliver et MVC framework som fx Angular.js.
+
+For at få en smule struktur på projekterne vil jeg bruge disse retningslinier:
 
 * 'Lær noget nyt' projekterne skal ikke opfattes som 'best practice' eller produktionskode. Fokus er på at få indblik i for mig nye teknologier, programmeringsprog, værktøjer m.v.
-* Når man taler webudvikling kommer man ikke uden om UI men forvent ikke gennemarbejde UI designs
-* Dette er et 'Do it yourself' projekt, og jeg kommer derfor til at begå fejl og/eller bevæge mig i den forkerte retning. Hvis du som læser bemærker dette og har viden på området så hører jeg meget gerne fra dig med konstruktion kritik.
-
-ikke tutorial mere lærings og dokumentations process
+* Når man taler webudvikling kommer man ikke uden om UI men forvent ikke gennemarbejdede UI designs.
+* Dette er et 'Do it yourself' projekt, og jeg kommer derfor til at begå fejl og/eller bevæge mig i den forkerte retning. Hvis du som læser bemærker dette og har viden på området, så hører jeg meget gerne fra dig med konstruktion kritik.
+* Blog indlæg vil __IKKE__ være 'yet another tutorial' men vil mere blive brugt til at beskrive en lærings- og dokumentationsprocess.
+* Sourcekoden til projekter findes på GitHub.
+* Jeg skriver for mig selv til mig selv. Men alle er naturligvis velkomne til at læse med og give feedback.
