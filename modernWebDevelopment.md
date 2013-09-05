@@ -1,21 +1,32 @@
 # Moderne webudvikling - del 1
 
+Oprindeligt blev Javascript designet som en klient teknologi til brug i internet browsere. Vi har de senere år set en trend med at Javascript er blevet brugt mere og mere til flere og større projekter ikke bare på klientsiden men også på serverdelen  
+
+Dette var ikke udgangspunktet for Javascript som programmeringssprog, hvorfor det giver nogle udfordringer med blandt andet at organisere ens kodebase så man ikke ender med en omgang spagettikode. 
+
+Klient frameworks som [Angular](http://angularjs.org/) og [Ember](http://emberjs.com/) har set dagens lys og åbnet muligheder for bedre organisering af Javascript kode efter MVC design pattern. 
+
+Samtidig ser vi eksempler på programmeringssprog som [Typescript](http://www.typescriptlang.org/) og [Coffeescript](http://coffeescript.org/) som giver nye muligheder for højere abstraktion i Javascript med indførelse af OO koncepter som klasser. Typescript giver også mulighed for indkapsling, nedarvning, moduler og interfaces og Javascript er en ægte delmængde af Typescript. Coffeescript har måske knapt så mange avancerede features men til gengæld en længere historik. Seneste version af Typescript har nu også generics som jo oprindeligt er inspireret af funktionelle programmeringssprog.
 
 
 ## Server
-Oprindeligt blev Javascript vist mest opfattet som en klient teknologi brugt i internet browsere. Vi har på det senere set en trend med at Javascript er blevet brugt mere og mere til flere og større projekter. Dette var ikke udgangspunktet for Javascript som programmeringssprog, hvorfor det giver nogle udfordringer med blandt andet at organisere ens kodebase så man ikke ender med en omgang spagettikode. Frameworks som [Angular](http://angularjs.org/) og [Ember](http://emberjs.com/) har set dagens lys og åbnet muligheder for bedre organisering af Javascript kode efter MVC design pattern. Samtidig ser vi eksempler på "programmeringssprog" [Typescript](http://www.typescriptlang.org/) og [Coffeescript](http://coffeescript.org/) som giver nye muligheder for højere abstraktion i Javascript med indførelse af OO koncepter som indkapsling, nedarvning, moduler og interfaces  ... og generics. (er det mon FP).    Underscore 
 
+For at kunne afvikle Javascript uden for en internet browser har man i sagens natur brug for en platform som ikke er internet baseret. Node.js er en serverbaseret platform designet som en eventbaseret ikke-blokerende I/O model uafhængig af webbrowsere. Node.js blev introduceret af Ryan Dahl i 2009, og overordnet kan Node.js beskrives som:
 
-Node.js er en serverbaseret platform designet som en eventbaseret ikke-blokerende I/O model uafhængig af webbrowsere. Node.js blev introduceret af Ryan Dahl i 2009 og overordnet kan Node.js beskrives som:
+> libuv + V8 + core library (JS/C++) = Node.js
 
-libuv + V8 + core library (JS/C++) = Node.js
+hvor
+
+- libuv
+- V8
+- core library
 
 Udover Node.js bruger jeg følgende moduler:
 
 - [express](http://expressjs.com/). Express er et webudviklings framework bygget på node.js med inspiration hentet fra Sinatra. Måske nævne NancyFX. connect middleware
 - [mongojs](https://github.com/gett/mongojs). MongoDB driver til Node.js
-- [mongodepository](https://github.com/iainjmitchell/mongorepositiory)
-- [jasmine-node](https://github.com/mhevery/jasmine-node)
+- [mongodepository](https://github.com/iainjmitchell/mongorepositiory). Brug af repository design pattern for database tilgang. Se mere nedenfor.
+- [jasmine-node](https://github.com/mhevery/jasmine-node). En Node.js version af test frameworket jasmine til brug for test af asynkrone kald.
 
 ## Database
 
@@ -63,6 +74,9 @@ Source koden findes på GitHub. Jeg skal gøre opmærksom på, at koden ikke er 
 
 Senere indlæg i denne serie vil fokusere mere på unit test, brugen af en message queue, authentication,
 sessions og cloud deployment. Sikker også MEAN 
+
+dart, livescripts
+
 
 # Links
 http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
