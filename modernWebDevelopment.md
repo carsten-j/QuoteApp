@@ -8,7 +8,6 @@ Klient frameworks som [Angular](http://angularjs.org/) og [Ember](http://emberjs
 
 Samtidig ser vi eksempler på programmeringssprog som [Typescript](http://www.typescriptlang.org/) og [Coffeescript](http://coffeescript.org/) som giver nye muligheder for højere abstraktion i Javascript med indførelse af OO koncepter som klasser. Typescript giver også mulighed for indkapsling, nedarvning, moduler og interfaces og Javascript er en ægte delmængde af Typescript. Coffeescript har måske knapt så mange avancerede features men til gengæld en længere historik. Seneste version af Typescript har nu også generics som jo oprindeligt er inspireret af funktionelle programmeringssprog.
 
-
 ## Server
 
 For at kunne afvikle Javascript uden for en internet browser har man i sagens natur brug for en platform som ikke er internet baseret. Node.js er en serverbaseret platform designet som en eventbaseret ikke-blokerende I/O model uafhængig af webbrowsere. Node.js blev introduceret af Ryan Dahl i 2009, og overordnet kan Node.js beskrives som:
@@ -17,13 +16,14 @@ For at kunne afvikle Javascript uden for en internet browser har man i sagens na
 
 hvor
 
-- libuv
-- V8
+- libuv - oprindeligt var Node.js ikke tilgængelig på Microsoft platformen fordi man brugte frameworket libev til at abstrahere [IOCP](http://en.wikipedia.org/wiki/Input/output_completion_port). Libuv erstattede senere libev og findes til flere platforme.
+- V8 - Chromes built-in JavaScript engine.
 - core library
 
 Udover Node.js bruger jeg følgende moduler:
 
-- [express](http://expressjs.com/). Express er et webudviklings framework bygget på node.js med inspiration hentet fra Sinatra. Måske nævne NancyFX. connect middleware
+- [express](http://expressjs.com/). Express er et webudviklings framework bygget på node.js og Connect med inspiration hentet fra Sinatra.  Hvis du er teknisk begrænset til Microsoft platforment så er det måske værd at kigge nærmere på [NancyFX](http://nancyfx.org/) som er et lignende letvægts web framework til .NET. 
+- [Connect](http://www.senchalabs.org/connect/) er et middleware framework med support for fx logging, cookies og sessions.
 - [mongojs](https://github.com/gett/mongojs). MongoDB driver til Node.js
 - [mongodepository](https://github.com/iainjmitchell/mongorepositiory). Brug af repository design pattern for database tilgang. Se mere nedenfor.
 - [jasmine-node](https://github.com/mhevery/jasmine-node). En Node.js version af test frameworket jasmine til brug for test af asynkrone kald.
@@ -48,38 +48,36 @@ repository og unit of work
 
 ## Klient
 
-Indtil videre er projektet alene et REST API. På et senere tidspunkt bygger jeg en webbaseret klient. Der er flere valgmuligheder som fx Angular og Ember som begge er MVC baserede klient frameworks.
+Indtil videre er projektet alene et REST lignende API. På et senere tidspunkt bygger jeg en webbaseret klient. Der er flere valgmuligheder som fx Angular og Ember som begge er MVC baserede klient frameworks.
 
 ## Andre værktøjer
-sublime text
-webstorm
-curl
-git
-github
+Udover et ønske om at lære om moderne web udvikling vil jeg også forsøge at bruge andre værktøjer end Visual Studio. Indtil videre bruger jeg Sublime Text som editor, WebStorm som IDE og curl til kommandolinie test af web API'et
 
+## Source kode
 
-## Continious deployment
+Source koden findes på GitHub. Jeg skal gøre opmærksom på, at koden ikke er velegnet til produktion. Projektet her er tænkt som learning by doing, og koden skal derfor ikke opfattes som best practice eller helt færdig. Hent projektet [her]()
 
-chrome
+## 
+Senere indlæg i denne serie vil fokusere mere på unit test, authentication, cookies, sessions og kontinuert cloud deployment. 
+Jeg tænker også at undersøge muligheden for at bruge message queue sammen med Node. Dart og LiveScript er også potentielle emner. Når jeg er igennem ovenstående emner, så vil jeg tage et kig på [Mean](http://www.mean.io/) som er en standard pakke indeholdede til at udvikle JavaScript baserede web applikationer baseret på Mongo, Express, Angular og Node.
 
-rest.api
+## Litteratur og links
+Der findes flere bøger om Node.js. Jeg har været godt tilfreds med [Node.js in Action](http://www.amazon.com/dp/1617290572).
 
+Man kan finde masser af information om Node.js på internettet. Her er et kort udvalg af links som jeg har fundet inspiration fra til dette blog indlæg.
 
+Asynkron unit test
 
-coffescript
-Repository patterm
-unit of work??
+[1] http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
 
-Source koden findes på GitHub. Jeg skal gøre opmærksom på, at koden ikke er velegnet til produktion. Projektet her er tænkt som learning by doing
+REST API i Node
 
-Senere indlæg i denne serie vil fokusere mere på unit test, brugen af en message queue, authentication,
-sessions og cloud deployment. Sikker også MEAN 
+[2] http://blog.modulus.io/nodejs-and-express-create-rest-api
 
-dart, livescripts
+Hvorfor overhovedet bruge Node
 
+[3] http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js 
 
-# Links
-http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
 
 # Moderne webudvikling - del 0
 
