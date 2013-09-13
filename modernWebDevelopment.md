@@ -44,7 +44,15 @@ Endelig findes der 2 programmer til hhv at importere og eksportere data. Dette k
     mongoimport -d quotes -c quotes --file quotes.json
 
 ### Design patterns
-repository og unit of work
+Det er næsten altid en god ide at sørge for et rent snit mellem forretningslogik og domæne klasser på den ene side og selve database tilgangen på den anden side. Et anderkendt pattern til den problemstilling er data mapper beskrevet i [1].
+
+I midten af 1990'erne var der en vis tiltro til at objekt orienterede databaser ville være fremtiden. Det var de så ikke og RDBMS tog i mange år helt over. I en årrække var der derfor en del som havde svært ved at se det fornuftige i en skarp separation mellem forretningslogik og database tilgang. Nu ser billedet anderledes ud efter den populære fremgang for noSQL databaser. Hvis man udover at have bruge for at hente enkelte domæneklasser (læs rækker i SQL databaser) kan det give god mening også at bruge repository design pattern så et abstraktionslag mellem forretningslogikken og databaselogikken. Et repository pattern giver mulighed for at implementere SQL lignedene forespørgler for ens domæneklasser. Dette virker som en rigtig god ide for et REST API hvor man tilgår fx alle bøger, ordre eller noget helt tredje.
+
+Man kan derudover udvide med unit of work pattern til at holde styr på hvilke domæneklasser som er ændret og som skal gemmes. I følge [1] er beskrivelsen af unit of work:
+
+>  Maintains a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems.
+
+Det er ikke klart for mig om unit of work giver mening sammen med noSQL databasen MongoDB som jo ikke er transaktionsbaseret. Hvis du ved noget om dette emne, så vil jeg mere gerne høre nærmere. 
 
 ## Klient
 
@@ -66,17 +74,23 @@ Der findes flere bøger om Node.js. Jeg har været godt tilfreds med [Node.js in
 
 Man kan finde masser af information om Node.js på internettet. Her er et kort udvalg af links som jeg har fundet inspiration fra til dette blog indlæg.
 
+Disse to klassiske bøger indeholder flere information of data mapper, repository og unit of work patterns.
+
+[1] http://www.amazon.com/dp/0321127420
+
+[2] http://www.amazon.com/dp/0321125215
+
 Asynkron unit test
 
-[1] http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
+[3] http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
 
 REST API i Node
 
-[2] http://blog.modulus.io/nodejs-and-express-create-rest-api
+[4] http://blog.modulus.io/nodejs-and-express-create-rest-api
 
 Hvorfor overhovedet bruge Node
 
-[3] http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js 
+[5] http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js 
 
 
 # Moderne webudvikling - del 0
