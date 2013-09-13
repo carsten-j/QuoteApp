@@ -63,7 +63,7 @@ Udover et ønske om at lære om moderne web udvikling vil jeg også forsøge at 
 
 ## Source kode
 
-Source koden findes på GitHub. Jeg skal gøre opmærksom på, at koden ikke er velegnet til produktion. Projektet her er tænkt som learning by doing, og koden skal derfor ikke opfattes som best practice eller helt færdig. Hent projektet [her]()
+Source koden findes på GitHub. Jeg skal gøre opmærksom på, at koden ikke er velegnet til produktion. Projektet her er tænkt som learning by doing, og koden skal derfor ikke opfattes som best practice eller helt færdig. Hent projektet [her](https://github.com/carsten-j/QuoteApp)
 
 ## 
 Senere indlæg i denne serie vil fokusere mere på unit test, authentication, cookies, sessions og kontinuert cloud deployment. 
