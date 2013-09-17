@@ -3,17 +3,69 @@ var app = express();
 
 var Repository = require('mongoRepository').Repository;
 var quoteRepository = new Repository('localhost/quotes', 'quotes');
+var RedisStore = require('connect-redis')(express);
 
-app.use(express.bodyParser());
+app.use(express.cookieParser());
+//app.use(express.session({ secret: 'foobar' }));
 
-app.get('/', function(req, res) {
-  quoteRepository.find({}, function(quotes) {
-    var response = {
-      quotes: quotes
-    };
-    res.json(response);
-  });
+app.use(express.session({
+    store: new RedisStore({
+        host: 'localhost',
+        port: 6379
+    }),
+    secret: '1234567890QWERTY'
+}));
+ 
+app.use(app.router);
+
+app.get('/', function (req, res) {
+    quoteRepository.find({}, function (quotes) {
+        var response = {
+            quotes: quotes
+        };
+        res.json(response);
+    });
 });
+
+
+app.get('/resetSession', function (req, res) {
+    req.session.destroy()
+    res.send('resetting sessions ...');
+});
+
+app.get('/awesome', function (req, res) {
+    var responseText;
+    if (req.session.lastPage)
+        responseText = 'Last page was: ' + req.session.lastPage + '. ';
+    else
+        responseText = 'You\'re Awesome';
+
+    req.session.lastPage = '/awesome';
+    res.send(responseText);
+});
+
+app.get('/radical', function (req, res) {
+    var responseText;
+    if (req.session.lastPage)
+        responseText = 'Last page was: ' + req.session.lastPage + '. ';
+    else
+        responseText = 'What a radical visit!';
+
+    req.session.lastPage = '/radical';
+    res.send(responseText);
+});
+
+app.get('/tubular', function (req, res) {
+    var responseText;
+    if (req.session.lastPage)
+        responseText = 'Last page was: ' + req.session.lastPage + '. ';
+    else
+        responseText = 'Are you a surfer?';
+
+    req.session.lastPage = '/tubular';
+    res.send(responseText);
+});
+
 
 app.get('/quote/:id', function(req, res) {
   quoteRepository.find({ "_id" : quoteRepository.db.ObjectId(req.params.id) }, function(quote) {
