@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/resetSession', function (req, res) {
-    req.session.destroy()
+    req.session.destroy();
     res.send('resetting sessions ...');
 });
 
