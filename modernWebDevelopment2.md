@@ -16,7 +16,8 @@ Hvis man alternativt bruger
 
 Så vil `nodemon` genstarte ens node server hvis man gemmer ændringer til ens sourcefiler. `nodemon` kan installeres på sædvanligvis med `npm`
 
-pm2 
+I et produktionsmiljø er kravene nok anderledes. Man vil muligvis gerne genstarte ens server når source filer bliver opdateret, men derudover ønsker man måske også at genstarte serveren automatisk hvis den går ned. I sådanne situationer er det værd at kigge nærmere på de muligheder som kommandolinieværktøjet [pm2](https://github.com/Unitech/pm2)
+
 nodefly
 
 ## Sessions
